@@ -1,0 +1,6 @@
+docker compose exec kimai /opt/kimai/bin/console kimai:user:create manager manager@company.com ROLE_TEAMLEAD
+
+https://chatgpt.com/c/6984b61e-92c0-8327-9419-63f1c3564de1
+
+
+https://claude.ai/chat/3f36bb97-9dda-47bf-a44c-f9fe630c606a
