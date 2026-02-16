@@ -1,0 +1,14 @@
+{% set logo = config('theme.branding.logo') %}
+{% set company = config('theme.branding.company') %}
+{% if logo is not empty %}
+    <img src="{{ logo }}" style="max-width: 300px;" alt="{{ company|default('SSA') }}">
+{% elseif company is not empty %}
+    <h2 style="color: #006a00; font-weight: bold;">{{ company }}</h2>
+    <p style="color: #c27d38;">Sustainable Solutions for Africa</p>
+{% elseif tabler_bundle.getLogoUrl() is not empty %}
+    <img alt="SSA" style="max-width: 150px;"
+         src="{% if '://' in tabler_bundle.getLogoUrl() %}{{ tabler_bundle.getLogoUrl() }}{% else %}{{ asset(tabler_bundle.getLogoUrl()) }}{% endif %}">
+{% else %}
+    <h2 style="color: #006a00; font-weight: bold;">SSA</h2>
+    <p style="color: #c27d38;">Sustainable Solutions for Africa</p>
+{% endif %}
