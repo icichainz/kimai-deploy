@@ -21,8 +21,6 @@ services:
       start_period: 10s
       timeout: 10s
       retries: 3
-    networks:
-      - kimai_internal
 
   kimai:
     <<: *env_file
@@ -30,7 +28,7 @@ services:
       context: ./codebase/kimai
       dockerfile: Dockerfile
       target: prod
-    
+
     volumes:
       - data:/opt/kimai/var/data
       - plugins:/opt/kimai/var/plugins
@@ -45,12 +43,6 @@ services:
     depends_on:
       sqldb:
         condition: service_healthy
-    networks:
-      - caddy
-      - kimai_internal
-    labels:
-      caddy: timesheet.ssa.tg
-      caddy.reverse_proxy: "{{upstreams 8001}}"
     develop:
       watch:
         - action: rebuild
@@ -77,9 +69,3 @@ volumes:
   data:
   mysql:
   plugins:
-
-networks:
-  caddy:
-    external: true
-  kimai_internal:
-    driver: bridge

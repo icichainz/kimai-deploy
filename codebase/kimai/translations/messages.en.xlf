@@ -1512,7 +1512,7 @@
       </trans-unit>
       <trans-unit id="JSBReoa" resname="api_password.intro">
         <source>api_password.intro</source>
-        <target>Here you can manage your API tokens, which are used to authenticate your application to Kimai.</target>
+        <target>Here you can manage your API tokens, which are used to authenticate your application.</target>
       </trans-unit>
       <trans-unit id="QT8.BCN" resname="api_password.missing_title">
         <source>api_password.missing_title</source>
@@ -1556,7 +1556,7 @@
       </trans-unit>
       <trans-unit id="3Clo55j" resname="about.title">
         <source>about.title</source>
-        <target>About Kimai</target>
+        <target>About SSA Timesheet</target>
       </trans-unit>
       <trans-unit id="i_XOmN4" resname="help_locales">
         <source>help_locales</source>

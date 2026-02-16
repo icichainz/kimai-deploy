@@ -17,6 +17,23 @@
     {% endif %}
     {% set event = trigger(constant('App\\Event\\ThemeEvent::STYLESHEET')) %}
     {{ event.content|raw }}
+    <style>
+        :root, [data-bs-theme="light"] {
+            --tblr-primary: #006a00;
+            --tblr-primary-rgb: 0, 106, 0;
+            --tblr-green: #006a00;
+            --tblr-green-rgb: 0, 106, 0;
+            --tblr-link-color: #006a00;
+            --tblr-link-color-rgb: 0, 106, 0;
+            --tblr-link-hover-color: #004d00;
+            --tblr-link-hover-color-rgb: 0, 77, 0;
+        }
+        .btn-primary, .bg-primary { background-color: #006a00 !important; border-color: #006a00 !important; }
+        .btn-primary:hover { background-color: #004d00 !important; border-color: #004d00 !important; }
+        .text-primary { color: #006a00 !important; }
+        a { color: #006a00; }
+        a:hover { color: #004d00; }
+    </style>
 {% endblock %}
 
 {% block javascripts %}
